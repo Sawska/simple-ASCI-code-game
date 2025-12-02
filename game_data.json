@@ -1,0 +1,119 @@
+{
+  "start_room": {
+    "image": "images/1_start_path.jpg",
+    "text": "You woke up in the middle of nowhere. It is dark and the streetlights are buzzing.",
+    "options": [
+      {
+        "keywords": ["forward", "go forward", "house"],
+        "next_level": "house_exterior"
+      },
+      {
+        "keywords": ["back", "go back"],
+        "next_level": "tall_grass"
+      }
+    ]
+  },
+  "tall_grass": {
+    "image": "images/2_tall_grass.jpg",
+    "text": "You are standing in tall grass. The darkness feels heavy here.",
+    "options": [
+      {
+        "keywords": ["forward", "go forward", "house"],
+        "next_level": "house_exterior"
+      },
+      {
+        "keywords": ["back", "go back"],
+        "next_level": "start_room"
+      }
+    ]
+  },
+  "house_exterior": {
+    "image": "images/3_white_house.jpg",
+    "text": "You see a white house of nowhere standing alone in the field.",
+    "options": [
+      {
+        "keywords": ["enter", "go to house", "inside"],
+        "next_level": "tv_room"
+      },
+      {
+        "keywords": ["back", "go back"],
+        "next_level": "tall_grass"
+      }
+    ]
+  },
+  "tv_room": {
+    "image": "images/4_tv_room.jpg",
+    "text": "There is an old TV standing in the room. It is on.",
+    "options": [
+      {
+        "keywords": ["forward", "exit", "door"],
+        "next_level": "courtyard"
+      },
+      {
+        "keywords": ["watch", "inspect", "tv"],
+        "next_level": "tv_static"
+      },
+      {
+        "keywords": ["back", "outside"],
+        "next_level": "house_exterior"
+      }
+    ]
+  },
+  "tv_static": {
+    "image": "images/5_tv_static.jpg",
+    "text": "The screen is full of static. You feel like something is watching you.",
+    "options": [
+      {
+        "keywords": ["back", "stop"],
+        "next_level": "tv_room"
+      }
+    ]
+  },
+  "courtyard": {
+    "image": "images/6_courtyard.jpg",
+    "text": "You stepped out into a strange courtyard. Large windows surround you.",
+    "options": [
+      {
+        "keywords": ["forward", "go forward", "corridor"],
+        "next_level": "corridor"
+      },
+      {
+        "keywords": ["back", "house"],
+        "next_level": "tv_room"
+      }
+    ]
+  },
+  "corridor": {
+    "image": "images/7_corridor.jpg",
+    "text": "You are in an endless yellow corridor. You hear a hum.",
+    "options": [
+      {
+        "keywords": ["forward", "go through", "run"],
+        "next_level": "pc_room"
+      },
+      {
+        "keywords": ["back"],
+        "next_level": "courtyard"
+      }
+    ]
+  },
+  "pc_room": {
+    "image": "images/8_pc_room.jpg",
+    "text": "You found a small room with a PC. This looks like the exit.",
+    "options": [
+      {
+        "keywords": ["exit", "use pc", "win"],
+        "next_level": "end_game"
+      },
+      {
+        "keywords": ["back"],
+        "next_level": "corridor"
+      }
+    ]
+  },
+  "end_game": {
+    "image": "images/1_start_path.jpg",
+    "text": "You accessed the system and escaped the simulation. YOU WIN.",
+    "options": []
+  }
+}

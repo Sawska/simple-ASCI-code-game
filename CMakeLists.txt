@@ -8,4 +8,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(headers)
 include_directories(libs)
 
-add_executable(Game main.cpp ImageParser.cpp)
+include_directories(libs/json/include)
+
+add_executable(Game main.cpp ImageParser.cpp GameManager.cpp)
+
+add_executable(LevelEditor LevelEditor.cpp)
+
